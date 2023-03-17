@@ -13,7 +13,11 @@ abstract class AbstractConnectionDecorator implements ConnectionInterface {
      * @var ConnectionInterface
      */
     protected $wrappedConn;
-    public WebSocket $WebSocket;
+
+    /**
+     * @var WebSocket
+     */
+    public $WebSocket;
 
     public function __construct(ConnectionInterface $conn) {
         $this->wrappedConn = $conn;
